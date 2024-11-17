@@ -1,6 +1,6 @@
 import sys
 import pygame as pg
-from controller.Controller import Controllervista
+from controller.Controller import Controllervista 
 from controller.Iniciar_pygame import Pygame_loader
 
 if __name__ == "__main__":

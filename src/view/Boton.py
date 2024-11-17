@@ -1,5 +1,5 @@
 import pygame
-
+from view.settings import *
 
 class Boton:
     def __init__(self, image, pos, text_input, font, base_color, hovering_color):
@@ -28,16 +28,12 @@ class Boton:
             if pygame.mouse.get_pressed()[0] == 1 and self.clickeado == False:
                 self.clickeado = True
                 accionado = True
-
             if pygame.mouse.get_pressed()[0] == 0:
                 self.clickeado = False
-
         return accionado
 
     def changeColor(self, posicion):
-        if posicion[0] in range(self.rect.left, self.rect.right) and posicion[
-            1
-        ] in range(self.rect.top, self.rect.bottom):
+        if posicion[0] in range(self.rect.left, self.rect.right) and posicion[1] in range(self.rect.top, self.rect.bottom):
             self.texto = self.fuente.render(self.texto_input, True, self.hovering_color)
         else:
             self.texto = self.fuente.render(self.texto_input, True, self.color_base)
