@@ -89,42 +89,39 @@ bg_cancha_oficial = pygame.image.load(IMAGEN_CANCHA_OFICIAL)
 BG_CANCHA_OFICIAL = pygame.transform.scale(bg_cancha_oficial, (ANCHO, ALTO // 1.3))
 clock = pygame.time.Clock()
 
+# Botones
 boton_surface = pygame.image.load(IMAGEN_BOTON4)
 boton_surface = pygame.transform.scale(boton_surface, (250, 80))
-
 boton_flecha_izquierda = pygame.image.load(FLECHA_IZQUIERDA)
 boton_flecha_izquierda = pygame.transform.scale(boton_flecha_izquierda, (65, 65))
-
 boton_flecha_derecha = pygame.image.load(FLECHA_DERECHA)
 boton_flecha_derecha = pygame.transform.scale(boton_flecha_derecha, (65, 65))
-
-
 boton_cuadrado = pygame.image.load(IMAGEN_CUADRADO)
 boton_cuadrado = pygame.transform.scale(boton_cuadrado, (75, 75))
-
 boton_home = pygame.image.load(HOME)
 boton_home = pygame.transform.scale(boton_home, (70, 70))
-
 boton_rojo = pygame.image.load(IMAGEN_BOTON5)
 boton_rojo = pygame.transform.scale(boton_rojo, (250, 80))
-
 boton_rojo_cuadrado = pygame.image.load(IMAGEN_BOTON5)
 boton_rojo_cuadrado = pygame.transform.scale(boton_rojo_cuadrado, (75, 75))
-
 boton_verde = pygame.image.load(IMAGEN_BOTON6)
 boton_verde = pygame.transform.scale(boton_verde, (250, 80))
-
 boton_verde_cuadrado = pygame.image.load(IMAGEN_BOTON6)
 boton_verde_cuadrado = pygame.transform.scale(boton_verde_cuadrado, (75, 75))
-
 boton_amarillo = pygame.image.load(IMAGEN_BOTON7)
 boton_amarillo = pygame.transform.scale(boton_amarillo, (250, 80))
-
 boton_dado = pygame.image.load(IMAGEN_DADO)
 boton_dado = pygame.transform.scale(boton_dado, (95, 95))
-
 boton_negro = pygame.image.load(BOTON_NEGRO)
 boton_negro = pygame.transform.scale(boton_negro, (250, 100))
+
+# MENU_MOUSE_POS = pygame.mouse.get_pos()
+# BOTON_LOGIN = Boton(boton_cuadrado,(int(ANCHO * 0.1), int(ALTO * 0.1)),"👤",pygame.font.Font(EMOJIS, 50),BLANCO,NEGRO,)
+# BOTON_JUGAR = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5)),"JUGAR",get_fuente(75),BLANCO,NEGRO,)
+# BOTON_OPCIONES = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5 + 180)),"OPCIONES",get_fuente(75),BLANCO,NEGRO,)
+# BOTON_RANKING = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5 + 90)),"RANKING",get_fuente(75),BLANCO,NEGRO,)
+# BOTON_SALIR = Boton(boton_rojo,(int(ANCHO * 0.5), int(ALTO * 0.5 + 270)),"SALIR",get_fuente(75),BLANCO,ROJO,)
+
 
 
 def get_fuente(tamanio):
@@ -140,14 +137,6 @@ defensores = abmcarta.get_defensores()
 abmusuario = AbmUsuario()
 usuarios = abmusuario.get_all()
 usuario = Usuario()
-
-
-MENU_MOUSE_POS = pygame.mouse.get_pos()
-BOTON_LOGIN = Boton(boton_cuadrado,(int(ANCHO * 0.1), int(ALTO * 0.1)),"👤",pygame.font.Font(EMOJIS, 50),BLANCO,NEGRO,)
-BOTON_JUGAR = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5)),"JUGAR",get_fuente(75),BLANCO,NEGRO,)
-BOTON_OPCIONES = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5 + 180)),"OPCIONES",get_fuente(75),BLANCO,NEGRO,)
-BOTON_RANKING = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5 + 90)),"RANKING",get_fuente(75),BLANCO,NEGRO,)
-BOTON_SALIR = Boton(boton_rojo,(int(ANCHO * 0.5), int(ALTO * 0.5 + 270)),"SALIR",get_fuente(75),BLANCO,ROJO,)
 
 # Dificultad
 
