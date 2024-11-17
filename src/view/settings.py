@@ -1,8 +1,9 @@
 import pygame
-
+import pygame as pg
 from database.AbmCarta import AbmCarta
 from database.AbmUsuario import AbmUsuario
 from database.Usuario import Usuario
+from .Boton import *
 
 # Configuracion de la pantalla
 ANCHO = 1280
@@ -127,6 +128,7 @@ boton_negro = pygame.transform.scale(boton_negro, (250, 100))
 
 
 def get_fuente(tamanio):
+    pg.font.init()
     return pygame.font.Font(FUENTE, tamanio)
 
 
@@ -139,7 +141,13 @@ abmusuario = AbmUsuario()
 usuarios = abmusuario.get_all()
 usuario = Usuario()
 
-POS_MOUSE = pygame.mouse.get_pos()
+
+MENU_MOUSE_POS = pygame.mouse.get_pos()
+BOTON_LOGIN = Boton(boton_cuadrado,(int(ANCHO * 0.1), int(ALTO * 0.1)),"👤",pygame.font.Font(EMOJIS, 50),BLANCO,NEGRO,)
+BOTON_JUGAR = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5)),"JUGAR",get_fuente(75),BLANCO,NEGRO,)
+BOTON_OPCIONES = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5 + 180)),"OPCIONES",get_fuente(75),BLANCO,NEGRO,)
+BOTON_RANKING = Boton(boton_surface,(int(ANCHO * 0.5), int(ALTO * 0.5 + 90)),"RANKING",get_fuente(75),BLANCO,NEGRO,)
+BOTON_SALIR = Boton(boton_rojo,(int(ANCHO * 0.5), int(ALTO * 0.5 + 270)),"SALIR",get_fuente(75),BLANCO,ROJO,)
 
 # Dificultad
 

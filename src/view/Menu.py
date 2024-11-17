@@ -1,11 +1,22 @@
 import sys
-
 import pygame
 
 from .Boton import *
 from .settings import *
 
+def pygame_setup():
+    pygame.init()
+    pygame.mixer.init()
+    pygame.font.init()
+
+def cargar_musica():
+    pygame.mixer.music.load(SONIDO_FONDO)
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play(-1)
+
 def menu_principal():
+    pygame_setup()
+    cargar_musica()
     while True:
         SCREEN.blit(BG, (0, 0))
 
@@ -76,13 +87,17 @@ def menu_principal():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if BOTON_LOGIN.checkForInput(MENU_MOUSE_POS):
-                    login()
+                    pass
+                    #login()
                 if BOTON_JUGAR.checkForInput(MENU_MOUSE_POS):
-                    jugar()
+                    pass
+                    #jugar()
                 if BOTON_OPCIONES.checkForInput(MENU_MOUSE_POS):
-                    opciones()
+                    pass
+                    #opciones()
                 if BOTON_RANKING.checkForInput(MENU_MOUSE_POS):
-                    ranking()
+                    pass
+                    #ranking()
                 if BOTON_SALIR.checkForInput(MENU_MOUSE_POS):
                     pygame.quit()
                     sys.exit()

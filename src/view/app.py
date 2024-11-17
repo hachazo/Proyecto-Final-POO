@@ -1,14 +1,16 @@
 import sys
-
+import pygame as pg
 import pygame
 
 from .Boton import *
 from .settings import *
 
 # pygame setup
-pygame.init()
-
-pygame.mixer.init()
+def pygame_setup():
+    pygame.init()
+    pygame.mixer.init()
+    pg.font.init()
+    
 pygame.mixer.music.load(SONIDO_FONDO)
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
@@ -407,6 +409,7 @@ def ranking():
 
 
 def menu_principal():
+    pygame_setup()
     while True:
         SCREEN.blit(BG, (0, 0))
 
@@ -543,4 +546,4 @@ def login():
         clock.tick(60)
 
 
-menu_principal()
+# menu_principal()
